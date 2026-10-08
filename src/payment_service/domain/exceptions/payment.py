@@ -5,3 +5,5 @@ class PaymentError(Exception):
 class InvalidStatusTransition(PaymentError):
     """Попытка перевсти платеж в недопустимый статус"""
 
+class DuplicateIdempotencyKey(PaymentError):
+    """Платёж с таким idempotency key уже существует."""
